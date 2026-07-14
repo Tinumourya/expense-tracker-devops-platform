@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expense-frontend
+  namespace: expense-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: expense-frontend
+  template:
+    metadata:
+      labels:
+        app: expense-frontend
+    spec:
+      containers:
+      - name: expense-frontend
+        image: tinu0712/expense-frontend:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: nginx-config
+  namespace: dev
+
+data:
+  APP_NAME: "DevOps Zero to Hero"
+  ENVIRONMENT: "Development"
+  OWNER: "Tinu"
